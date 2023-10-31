@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Telegram_clone</string>
+    <string name="drawer_item_1">Create group</string>
+    <string name="drawer_item_2">Create secret chat</string>
+    <string name="drawer_item_3">Create channel</string>
+    <string name="drawer_item_4">Contacts</string>
+    <string name="drawer_item_5">Calls</string>
+    <string name="drawer_item_6">Favorites</string>
+    <string name="drawer_item_7">Settings</string>
+    <string name="drawer_item_8">Add friends</string>
+    <string name="drawer_item_9">Help</string>
+
+    <string name="Universal_toast_info_upgraded_successfully">information successfully upgraded</string>
+
+
+    <string name="settings_header_name">Ruslan Leonov</string>
+    <string name="settings_header_status">online</string>
+    <string name="settings_account_label">Account</string>
+    <string name="settings_account_number">+79134854509</string>
+    <string name="settings_account_number_label">Tap to change</string>
+    <string name="settings_account_nickname" formatted="false">\@EzioAssassin</string>
+    <string name="settings_account_nickname_label">User\'s nickname</string>
+    <string name="settings_account_BIO">BIO</string>
+    <string name="settings_account_BIO_label">Write about yourself</string>
+    <string name="settings_menu_change_name">Change name</string>
+    <string name="settings_menu_logoff">Log off</string>
+
+    <string name="settings_changeName_name_hint">Name</string>
+    <string name="settings_changeName_surname_hint">Surname</string>
+    <string name="settings_changeName_toast_emptyName">Name field cannot be empty</string>
+    <string name="settings_changeName_toast_success">information successfully upgraded</string>
+
+    <string name="settings_changeName_username_hint">Username</string>
+
+    <string name="settings_changeName_bio_hint">BIO</string>
+
+    <string name="auth_toolbar_title">Your phone number</string>
+    <string name="auth_phone_editText_hint">Input here</string>
+    <string name="cd_auth_btn_next">auth_code_pic</string>
+
+    <string name="auth_passcode_top_label">Enter the code</string>
+    <string name="auth_passcode_mid_label">We have sent you SMS with passcode on your phone number</string>
+    <string name="auth_passcode_enterCode_hint">- - - - - -</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

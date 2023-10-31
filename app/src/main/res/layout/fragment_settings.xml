@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/material_drawer_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/settings_header_user_photo"
+            android:layout_width="@dimen/settings_header_photo_width"
+            android:layout_height="@dimen/settings_header_photo_height"
+            android:src="@drawable/default_photo"
+            app:civ_border_color="@color/material_drawer_accent"
+            app:civ_border_width="@dimen/settings_header_photo_border"
+            app:civ_circle_background_color="@color/material_drawer_accent"
+            android:layout_marginStart="@dimen/app_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_header_nameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/app_margin"
+            android:layout_marginTop="@dimen/app_small_margin"
+            tools:text="@string/settings_header_name"
+            android:textColor="@color/material_drawer_accent"
+            android:textStyle="bold"
+            android:textSize="@dimen/large_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/settings_header_user_photo"
+            app:layout_constraintTop_toTopOf="@id/settings_header_user_photo" />
+        <TextView
+            android:id="@+id/settings_header_statusTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/app_margin"
+            tools:text="@string/settings_header_status"
+            android:textColor="@color/material_drawer_accent"
+            android:textSize="@dimen/normal_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/settings_header_user_photo"
+            app:layout_constraintTop_toBottomOf="@id/settings_header_nameTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/settings_accountLabel_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_drawer_primary"
+        app:layout_constraintTop_toBottomOf="@id/settings_header_layout"
+        android:text="@string/settings_account_label"
+        android:textStyle="bold"
+        android:textSize="@dimen/normal_text"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/vertical_large_margin"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_account_number_info_btn"
+        style="@style/settingsAccButtons"
+        app:layout_constraintTop_toBottomOf="@id/settings_accountLabel_TV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/settings_account_number_info_TV"
+            app:layout_constraintTop_toTopOf="@id/settings_account_number_info_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/settings_account_number"
+            style="@style/normalText" />
+        <TextView
+            android:id="@+id/settings_account_number_label_TV"
+            app:layout_constraintTop_toBottomOf="@id/settings_account_number_info_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/settings_account_number_label"
+            style="@style/smallText" />
+        <View
+            app:layout_constraintTop_toBottomOf="@id/settings_account_number_label_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/dividerLight" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_account_nickname_info_btn"
+        app:layout_constraintTop_toBottomOf="@id/settings_account_number_info_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/settingsAccButtons">
+        <TextView
+            android:id="@+id/settings_account_nickname_info_TV"
+            app:layout_constraintTop_toTopOf="@id/settings_account_nickname_info_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/settings_account_nickname"
+            style="@style/normalText" />
+        <TextView
+            android:id="@+id/settings_account_nickname_label_TV"
+            app:layout_constraintTop_toBottomOf="@id/settings_account_nickname_info_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/settings_account_nickname_label"
+            style="@style/smallText" />
+        <View
+            app:layout_constraintTop_toBottomOf="@id/settings_account_nickname_label_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/dividerLight" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_account_BIO_info_btn"
+        app:layout_constraintTop_toBottomOf="@id/settings_account_nickname_info_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/settingsAccButtons">
+        <TextView
+            android:id="@+id/settings_account_BIO_info_TV"
+            app:layout_constraintTop_toTopOf="@id/settings_account_BIO_info_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/settings_account_BIO"
+            style="@style/normalText" />
+        <TextView
+            android:id="@+id/settings_account_BIO_label_TV"
+            app:layout_constraintTop_toBottomOf="@id/settings_account_BIO_info_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/settings_account_BIO_label"
+            style="@style/smallText" />
+        <View
+            app:layout_constraintTop_toBottomOf="@id/settings_account_BIO_label_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/dividerLight" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/settings_header_btn_change_user_photo"
+        android:layout_width="@dimen/settings_header_photo_width"
+        android:layout_height="@dimen/settings_header_photo_height"
+        android:src="@drawable/ic_camera"
+        app:civ_border_color="@color/material_drawer_primary"
+        app:civ_border_width="@dimen/settings_header_photo_border"
+        app:civ_circle_background_color="@color/material_drawer_accent"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_header_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_header_layout"
+        android:layout_marginEnd="@dimen/app_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
